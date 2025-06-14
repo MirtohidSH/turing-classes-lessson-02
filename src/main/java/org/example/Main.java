@@ -40,6 +40,6 @@ public class Main {
         System.out.printf("a/=3: %d\n", a/=3);
         System.out.printf("a%%=3: %d\n", a%=3);
 
-        
+
     }
 }
