@@ -41,5 +41,12 @@ public class Main {
         System.out.printf("a%%=3: %d\n", a%=3);
 
 
+        boolean ab = (a==b);
+        boolean ac = (a!=b);
+        int min = (a > w) ? a : w;
+
+        System.out.printf("a == b: %b\n", ab);
+        System.out.printf("a != b: %b\n", ac);
+        System.out.println(min);
     }
 }
