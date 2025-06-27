@@ -1,23 +1,26 @@
 package org.example;
 
+import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        int c = 3;
-        long b = 7;
-        double a = 5;
-        double d = (a++) + (--b) - (a++) + (a+=3) + (++c);
-
-        System.out.printf("%,2f\n" , d);
-        System.out.printf("Result: %d %s %.2f\n", 19, "Java", 10.1978);
-        System.out.printf("%,2f" , ((a++) + (--b) - (a++) + (a+=3) + (++c)));
-
-        Scanner sc = new Scanner(System.in);
-        int a1 = sc.nextInt();
-        int b1 = sc.nextInt();
-
-        System.out.printf(a1 < b1 ? "Tural" : a1 > b1 ? "Fexri" : "Murad");
+//        int c = 3;
+//        long b = 7;
+//        double a = 5;
+//        double d = (a++) + (--b) - (a++) + (a+=3) + (++c);
+//
+//        System.out.printf("%,2f\n" , d);
+//        System.out.printf("Result: %d %s %.2f\n", 19, "Java", 10.1978);
+//        System.out.printf("%,2f" , ((a++) + (--b) - (a++) + (a+=3) + (++c)));
+//
+//        Scanner sc = new Scanner(System.in);
+//        int a1 = sc.nextInt();
+//        int b1 = sc.nextInt();
+//
+//        System.out.printf(a1 < b1 ? "Tural" : a1 > b1 ? "Fexri" : "Murad");
 
 //        System.out.println("Java");
 //        System.out.print("Java\n");
@@ -65,5 +68,11 @@ public class Main {
 //        System.out.printf("a == b: %b\n", ab);
 //        System.out.printf("a != b: %b\n", ac);
 //        System.out.println(min);
+        int[] src = {1, 2, 3};
+        int[] dest = new int[3];
+
+        System.arraycopy(src, 0, dest, 0, src.length);
+        System.out.println(dest[0]);
+        System.out.println(Arrays.toString(dest));
     }
 }
