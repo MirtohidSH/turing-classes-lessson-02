@@ -47,14 +47,14 @@ public class AtmApp {
         System.out.print("Adınızı daxil edin: ");
         Scanner sc = new Scanner(System.in);
         String adi = sc.nextLine();
-        int count=0;
+        int count=-1;
         while(true){
             for (int i = 0; i < 3; i++)
                 if(userName[i].equals(adi)){
                     count = i;
                     break;
                 }
-            if(count == 0) {
+            if(count == -1) {
                 System.out.println("Yanlis ad daxil edildi.Yeniden daxil edin.");
                 adi = sc.nextLine();
             }
@@ -69,19 +69,18 @@ public class AtmApp {
         String adi = sc.nextLine();
         System.out.print("Meblegi daxil edin: ");
         int meb = sc.nextInt();
-        int count=0;
+        int count=-1;
         while(true){
             for (int i = 0; i < 3; i++)
                 if(userName[i].equals(adi)){
                     count = i;
                     break;
                 }
-            if(count == 0) {
+            if(count == -1) {
                 System.out.println("Yanlis ad daxil edildi.Yeniden daxil edin.");
                 adi = sc.nextLine();
             }
             else break;
-
         }
         if(meb >= 1000) System.out.println("TEBRIKLER!!!");
         balances[count] += meb;
@@ -93,19 +92,18 @@ public class AtmApp {
         System.out.print("Adınızı daxil edin: ");
         Scanner sc = new Scanner(System.in);
         String adi = sc.nextLine();
-        int count=0;
+        int count=-1;
         while(true){
             for (int i = 0; i < 3; i++)
                 if(userName[i].equals(adi)){
                     count = i;
                     break;
                 }
-            if(count == 0) {
+            if(count == -1) {
                 System.out.println("Yanlis ad daxil edildi.Yeniden daxil edin.");
                 adi = sc.nextLine();
             }
             else break;
-
         }
         System.out.print("Cixartmaq istediyiniz meblegi daxil edin: ");
         int meb;
@@ -124,14 +122,14 @@ public class AtmApp {
         System.out.print("Kohne adinizi daxil edin: ");
         Scanner sc = new Scanner(System.in);
         String adi = sc.nextLine();
-        int count=0;
+        int count=-1;
         while(true){
             for (int i = 0; i < 3; i++)
                 if(userName[i].equals(adi)){
                     count = i;
                     break;
                 }
-            if(count == 0) {
+            if(count == -1) {
                 System.out.println("Yanlis ad daxil edildi.Yeniden daxil edin.");
                 adi = sc.nextLine();
             }
