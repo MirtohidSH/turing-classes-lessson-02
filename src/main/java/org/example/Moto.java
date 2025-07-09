@@ -6,7 +6,6 @@ public class Moto {
     private int typeOfEngine;
     private int km;
     private int place;
-    // ✅ Əlavə sahələr:
     private String brand;
     private String model;
     private String color;
