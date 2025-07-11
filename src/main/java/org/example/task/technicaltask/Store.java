@@ -1,9 +1,9 @@
 package org.example.task.technicaltask;
 
 public class Store {
-    private String name;
-    private String address;
-    private Product[] products;
+    public String name;
+    public String address;
+    public Product[] products;
 
     public Store(String name, String address, Product[] products) {
         this.name = name;
