@@ -12,23 +12,23 @@ public class Store {
     }
 
     public void printAllProducts() {
-        for (int i = 0; i < products.length; i++) {
-            System.out.println(products[i]);
+        for (Product product : products) {
+            System.out.println(product);
         }
     }
 
     public void printExpensiveProducts(double limit) {
-        for (int i = 0; i < products.length; i++) {
-            if (products[i].price > limit) {
-                System.out.println(products[i]);
+        for (Product product : products) {
+            if (product.price > limit) {
+                System.out.println(product);
             }
         }
     }
 
     public void applyDiscountToAll(double percent) {
-        for (int i = 0; i < products.length; i++) {
-            products[i].price = products[i].discountPrice(percent);
-            System.out.printf("%s: %.2f\n", products[i].name, products[i].price);
+        for (Product product : products) {
+            product.price = product.discountPrice(percent);
+            System.out.printf("%s: %.2f\n", product.name, product.price);
         }
     }
 }
