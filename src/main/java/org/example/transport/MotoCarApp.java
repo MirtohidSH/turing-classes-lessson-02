@@ -1,4 +1,4 @@
-package org.example;
+package org.example.transport;
 
 public class MotoCarApp {
     public static void main(String[] args) {
