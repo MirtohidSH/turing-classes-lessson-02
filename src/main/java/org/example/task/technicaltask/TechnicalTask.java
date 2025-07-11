@@ -12,6 +12,7 @@ public class TechnicalTask {
 
         store.printAllProducts(); System.out.println();
         store.printExpensiveProducts(50); System.out.println();
-        store.applyDiscountToAll(10);
+        store.applyDiscountToAll(10); System.out.println();
+        product2.isInStock();
     }
 }
