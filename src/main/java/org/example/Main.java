@@ -74,5 +74,10 @@ public class Main {
         System.arraycopy(src, 0, dest, 0, src.length);
         System.out.println(dest[0]);
         System.out.println(Arrays.toString(dest));
+
+//        String a = "aaa";
+//        String[] b = a.split("a");
+//        System.out.println("Length: " + b.length);
+
     }
 }

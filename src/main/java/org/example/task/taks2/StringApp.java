@@ -1,4 +1,4 @@
-package org.example.task;
+package org.example.task.taks2;
 
 public class StringApp {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.example.transport;
+package org.example.task.transport;
 
 public class Car {
     private String color;
