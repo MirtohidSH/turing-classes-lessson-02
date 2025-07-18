@@ -68,16 +68,27 @@ public class Main {
 //        System.out.printf("a == b: %b\n", ab);
 //        System.out.printf("a != b: %b\n", ac);
 //        System.out.println(min);
-        int[] src = {1, 2, 3};
-        int[] dest = new int[3];
-
-        System.arraycopy(src, 0, dest, 0, src.length);
-        System.out.println(dest[0]);
-        System.out.println(Arrays.toString(dest));
+//        int[] src = {1, 2, 3};
+//        int[] dest = new int[3];
+//
+//        System.arraycopy(src, 0, dest, 0, src.length);
+//        System.out.println(dest[0]);
+//        System.out.println(Arrays.toString(dest));
 
 //        String a = "aaa";
 //        String[] b = a.split("a");
 //        System.out.println("Length: " + b.length);
+
+        String[] strs = {"flower", "flow", "flight"};
+        System.out.println(strs[1].charAt(0));
+        int m = 0;
+        int i = 1;
+        String s1 = String.valueOf(strs[i].charAt(m));
+        String str = "";
+        str += strs;
+        String name = "a";
+        String name2 = "a";
+        System.out.println(name.equals(name2));
 
     }
 }
