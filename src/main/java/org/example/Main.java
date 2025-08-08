@@ -79,16 +79,15 @@ public class Main {
 //        String[] b = a.split("a");
 //        System.out.println("Length: " + b.length);
 
-        String[] strs = {"flower", "flow", "flight"};
-        System.out.println(strs[1].charAt(0));
-        int m = 0;
-        int i = 1;
-        String s1 = String.valueOf(strs[i].charAt(m));
-        String str = "";
-        str += strs;
-        String name = "a";
-        String name2 = "a";
-        System.out.println(name.equals(name2));
-
+//        String[] strs = {"flower", "flow", "flight"};
+//        System.out.println(strs[1].charAt(0));
+//        int m = 0;
+//        int i = 1;
+//        String s1 = String.valueOf(strs[i].charAt(m));
+//        String str = "";
+//        str += strs;
+//        String name = "a";
+//        String name2 = "a";
+//        System.out.println(name.equals(name2));
     }
 }
