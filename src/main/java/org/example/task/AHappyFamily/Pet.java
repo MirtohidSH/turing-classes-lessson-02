@@ -1,15 +1,17 @@
 package org.example.task.AHappyFamily;
 
+import org.example.task.AHappyFamily.PetsPackage.Species;
+
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Pet {
+public abstract class Pet {
 
-    private String species;
-    private String nickname;
-    private int age;
-    private int trickLevel;
-    private String[] habits;
+    protected Species species;
+    protected String nickname;
+    protected int age;
+    protected int trickLevel;
+    protected String[] habits;
 
     static {
         System.out.println("Class Pet is being loaded.");
@@ -22,24 +24,22 @@ public class Pet {
     public Pet() {
     }
 
-    public Pet(String species, String nickname) {
-        this.species = species;
+    public Pet(String nickname) {
         this.nickname = nickname;
     }
 
-    public Pet(String species, String nickname, int age, int trickLevel, String[] habits) {
-        this.species = species;
+    public Pet( String nickname, int age, int trickLevel, String[] habits) {
         this.nickname = nickname;
         this.age = age;
         this.trickLevel = trickLevel;
         this.habits = habits;
     }
 
-    public String getSpecies() {
+    public Species getSpecies() {
         return species;
     }
 
-    public void setSpecies(String species) {
+    public void setSpecies(Species species) {
         this.species = species;
     }
 
@@ -81,12 +81,11 @@ public class Pet {
         System.out.println("I am eating");
     }
 
-    public void respond() {
-        System.out.printf("Hello, owner. I am - %s. I miss you!\n", nickname);
-    }
+    public abstract void respond();
 
-    public void foul() {
-        System.out.println("I need to cover it up");
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.printf("Pet object %s is being removed\n", nickname);
     }
 
     @Override
@@ -103,7 +102,17 @@ public class Pet {
 
     @Override
     public String toString() {
-        return "%s{nickname='%s', age=%d, trickLevel=%d, habits=%s}"
-                .formatted(species.toLowerCase(), nickname, age, trickLevel, Arrays.toString(habits));
+        return "%s{nickname='%s', age=%d, trickLevel=%d, habits=%s, canFly=%b, numberOfLegs=%d, hasFur=%b}"
+                .formatted(
+                        species,
+                        nickname,
+                        age,
+                        trickLevel,
+                        Arrays.toString(habits),
+                        species.canFly(),
+                        species.getNumberOfLegs(),
+                        species.hasFur()
+                );
     }
+
 }

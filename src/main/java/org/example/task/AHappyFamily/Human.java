@@ -1,6 +1,8 @@
 package org.example.task.AHappyFamily;
 
-import java.util.Arrays;
+import org.example.task.AHappyFamily.PetsPackage.DayOfWeek;
+
+import java.util.Map;
 import java.util.Objects;
 import java.util.Random;
 
@@ -10,7 +12,7 @@ public class Human {
     private String surname;
     private int year;
     private int iq;
-    private String[][] schedule;
+    private Map<DayOfWeek, String> schedule;
     private Family family;
 
     static {
@@ -30,12 +32,21 @@ public class Human {
         this.year = year;
     }
 
-    public Human(String name, String surname, int year, int iq, String[][] schedule) {
+    public Human(String name, String surname, int year, int iq, Map<DayOfWeek, String> schedule) {
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
         this.schedule = schedule;
+    }
+
+    public Human(String name, String surname, int year, int iq, Map<DayOfWeek, String> schedule, Family family) {
+        this.name = name;
+        this.surname = surname;
+        this.year = year;
+        this.iq = iq;
+        this.schedule = schedule;
+        this.family = family;
     }
 
     public String getName() {
@@ -70,11 +81,11 @@ public class Human {
         this.iq = iq;
     }
 
-    public String[][] getSchedule() {
+    public Map<DayOfWeek, String> getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(String[][] schedule) {
+    public void setSchedule(Map<DayOfWeek, String> schedule) {
         this.schedule = schedule;
     }
 
@@ -126,6 +137,11 @@ public class Human {
     }
 
     @Override
+    protected void finalize() throws Throwable {
+        System.out.printf("Human object %s %s is being removed\n", name, surname);
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Human human = (Human) o;
@@ -134,12 +150,12 @@ public class Human {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, year, iq, Arrays.deepHashCode(schedule), family);
+        return Objects.hash(name, surname, year, iq, schedule, family);
     }
 
     @Override
     public String toString() {
         return "Human{name='%s', surname='%s', year=%d, iq=%d, schedule=%s}"
-                .formatted(name, surname, year, iq, Arrays.deepToString(schedule));
+                .formatted(name, surname, year, iq, schedule);
     }
 }

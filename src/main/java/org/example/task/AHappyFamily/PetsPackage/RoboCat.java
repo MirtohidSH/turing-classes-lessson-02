@@ -1,0 +1,16 @@
+package org.example.task.AHappyFamily.PetsPackage;
+
+import org.example.task.AHappyFamily.Pet;
+
+public class RoboCat extends Pet {
+
+    public RoboCat(String nickname, int age, int trickLevel, String[] habits) {
+        super(nickname, age, trickLevel, habits);
+        this.species = Species.ROBOCAT;
+    }
+
+    @Override
+    public void respond() {
+        System.out.printf("Hello, owner. I am RoboCat %s.\n", nickname);
+    }
+}

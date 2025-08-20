@@ -18,7 +18,7 @@ public class Family {
         System.out.println("A new Family object is created.");
     }
 
-    public Family(Human mother, Human father) {
+    public Family(Human mother, Human father, Pet pet) {
         this.mother = mother;
         this.father = father;
         this.children = new Human[0];
@@ -102,6 +102,11 @@ public class Family {
 
     public int countFamily() {
         return 2 + children.length + (pet != null ? 1 : 0);
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Family object is being removed");
     }
 
     @Override
